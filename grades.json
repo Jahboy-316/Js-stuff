@@ -1,0 +1,18 @@
+[
+    {
+        "courseCode": "CPE401",
+        "grade": "A"
+    },
+    {
+        "courseCode": "CPE403",
+        "grade": "B"
+    },
+    {
+        "courseCode": "CPE405",
+        "grade": "A"
+    },
+    {
+        "courseCode": "CPE407",
+        "grade": "C"
+    }
+]
