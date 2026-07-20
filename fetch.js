@@ -1,21 +1,19 @@
 async function loadData() {
 
-    const [studentResponse, coursesResponse, gradeResponse] = 
+    const [studentData, coursesData, gradesData] =
     await Promise.all([
-        fetch("student.json"),
-        fetch("courses.json"),
-        fetch("grades.json")
-    ])   
-    
-    const [student, courses, grades] = 
-    await Promise.all([
-        studentResponse.json(),
-        coursesResponse.json(),
-        gradeResponse.json()
-    ])
+        readFile("student.json", "utf-8"),
+        readFile("courses.json", "utf-8"),
+        readFile("grades.json", "utf-8")
+    ]);
 
-    displayStudents(student, courses, grades)
+    const student = JSON.parse(studentData);
+    const courses = JSON.parse(coursesData);
+    const grades = JSON.parse(gradesData);
+
+    displayStudents(student, courses, grades);
 }
+
 
 function displayStudents(student, courses, grades){
     console.log(student.name)
