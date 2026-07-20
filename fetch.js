@@ -1,3 +1,5 @@
+import { readFile } from "fs/promises";
+
 async function loadData() {
 
     const [studentData, coursesData, gradesData] =
